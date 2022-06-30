@@ -12,24 +12,24 @@ class Users extends Component{
 
         const {allUsers, pressEditBtn, pressDelete} = this.props;
 
-        const handleClick = async () => {
-            setIsLoading(true);
-            try {
-              const {data} = await axios.get('https://jsonplaceholder.typicode.com/todos/1', {
-                headers: {
-                  Accept: 'application/json',
-                },
-              });
+        // const handleClick = async () => {
+        //     setIsLoading(true);
+        //     try {
+        //       const {data} = await axios.get('https://jsonplaceholder.typicode.com/todos/1', {
+        //         headers: {
+        //           Accept: 'application/json',
+        //         },
+        //       });
         
-              console.log('data is: ', JSON.stringify(data, null, 4));
+        //       console.log('data is: ', JSON.stringify(data, null, 4));
         
-              setData(data);
-            } catch (err) {
-              setErr(err.message);
-            } finally {
-              setIsLoading(false);
-            }
-          };
+        //       setData(data);
+        //     } catch (err) {
+        //       setErr(err.message);
+        //     } finally {
+        //       setIsLoading(false);
+        //     }
+        //   };
         
 
         const usersList = allUsers.map((user, index) => {
